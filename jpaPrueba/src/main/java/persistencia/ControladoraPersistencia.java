@@ -11,4 +11,11 @@ public class ControladoraPersistencia {
         aluJpa.create(alumno);
     }
 
+    public void eliminarAlumno(int id) {
+        aluJpa.destroy(id);
+    }
+
+    public void editarAlumno(Alumno alumno) {
+        aluJpa.edit(alumno);
+    }
 }

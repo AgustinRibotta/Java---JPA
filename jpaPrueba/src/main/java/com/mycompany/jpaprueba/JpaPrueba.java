@@ -10,9 +10,15 @@ public class JpaPrueba {
         
         ControladoraLogica control = new ControladoraLogica();
         
-        Alumno alumno = new Alumno(16, "Agustin", "Ribotta", new Date());
+        Alumno alumno = new Alumno(17, "Agustin", "Ribotta", new Date());
         
-        control.CreateAlumno(alumno);
+        control.createAlumno(alumno);
+
+//        control.eliminarAlumno(15);
+
+        alumno.setApellido("Roberto");
+        control.editarAlumno(alumno);
+        
         
     }
 }
