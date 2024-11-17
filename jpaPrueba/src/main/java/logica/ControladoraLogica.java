@@ -1,5 +1,6 @@
 package logica;
 
+import java.util.ArrayList;
 import persistencia.ControladoraPersistencia;
 
 public class ControladoraLogica {
@@ -16,5 +17,14 @@ public class ControladoraLogica {
 
     public void editarAlumno (Alumno alumno) {
         controladoPersistencia.editarAlumno(alumno);
+    }
+
+    public Alumno traeAlumno (int id){
+         
+        return controladoPersistencia.trearAlumno(id);
+    } 
+    
+    public ArrayList<Alumno> traertListaAlumnos () {
+        return  controladoPersistencia.trearListaAlumnos();
     }
 }

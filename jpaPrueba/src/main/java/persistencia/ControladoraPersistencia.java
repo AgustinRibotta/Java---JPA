@@ -1,5 +1,7 @@
 package persistencia;
 
+import java.util.ArrayList;
+import java.util.List;
 import logica.Alumno;
 
 public class ControladoraPersistencia {
@@ -17,5 +19,18 @@ public class ControladoraPersistencia {
 
     public void editarAlumno(Alumno alumno) {
         aluJpa.edit(alumno);
+    }
+
+    public Alumno trearAlumno(int id) {
+        return aluJpa.findAlumno(id);
+    }
+
+    public ArrayList<Alumno> trearListaAlumnos() {
+        
+//      Convertimos la lista que nos devuelve en aluJpa en Array List
+        List<Alumno> listita = aluJpa.findAlumnoEntities();
+        ArrayList<Alumno> listaAlumnos = new ArrayList<Alumno>(listita);
+        
+        return listaAlumnos;
     }
 }
